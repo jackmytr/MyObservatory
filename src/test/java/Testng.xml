@@ -6,40 +6,47 @@
 	<!-- <parameter name="platform" value="${platform}" /> -->
 	<!-- <parameter name="url" value="${url}" />  -->
 
-	<test  parallel="classes" name = "iPhone 12 / iOS 15.0.1">
-		<parameter name="device" value="00008101-00030C560A40001E" />
-		<parameter name="platform" value="IOS" />
-		<parameter name="url" value="https://aia.experitest.com/wd/hub" />
-		<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
-		<classes>
-			<class name="test.TestRun" />
-		</classes>
-	</test>
-	<!--<test thread-count="2" parallel="classes" name = "Samsung Galaxy S20 / Android 11">
-		<parameter name="device" value="RF8N20M6MNH" />
-		<parameter name="platform" value="ANDROID" />
-		<parameter name="url" value="https://aia.experitest.com/wd/hub" />
-		<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
-		<classes>
-			<class name="test.TestRun" />
-		</classes>
-	</test>-->
-	<!--<test thread-count="2" parallel="classes" name = "Redmi Note 9 Pro (backup / Android 10)">
-		<parameter name="device" value="9742af0b" />
-		<parameter name="platform" value="ANDROID" />
-		<parameter name="url" value="https://aia.experitest.com/wd/hub" />
-		<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
-		<classes>
-			<class name="test.TestRun" />
-		</classes>
-	</test>-->
-	<!--<test thread-count="2" parallel="classes" name = "iPad (8th generation) (backup / iOS 14.3)">
-		<parameter name="device" value="00008020-001158810CBA402E" />
-		<parameter name="platform" value="IOS" />
-		<parameter name="url" value="https://aia.experitest.com/wd/hub" />
-		<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
-		<classes>
-			<class name="test.TestRun" />
-		</classes>
-	</test>-->
+	<!--Device 1: iPhone 12-->
+	<!-- <test name = "iPhone 12 / iOS 15.0.1">
+         <parameter name="device" value="00008101-00030C560A40001E" />
+         <parameter name="platform" value="IOS" />
+         <parameter name="url" value="https://aia.experitest.com/wd/hub" />
+         <parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
+         <classes>
+             <class name="test.TestRun" />
+         </classes>
+     </test>-->
+
+ 	<!--Device 2: Samsung Galaxy S20-->
+        <test name = "Samsung Galaxy S20 / Android 11">
+            <parameter name="device" value="RF8N20M6MNH" />
+            <parameter name="platform" value="ANDROID" />
+            <parameter name="url" value="https://aia.experitest.com/wd/hub" />
+            <parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
+            <classes>
+                <class name="test.TestRun" />
+            </classes>
+        </test>
+
+	<!--Backup Android device-->
+		<!--<test name = "Redmi Note 9 Pro (backup / Android 10)">
+			<parameter name="device" value="9742af0b" />
+			<parameter name="platform" value="ANDROID" />
+			<parameter name="url" value="https://aia.experitest.com/wd/hub" />
+			<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
+			<classes>
+				<class name="test.TestRun" />
+			</classes>
+		</test>-->
+
+	<!--Backup iOS device (iPad handling)-->
+		<!--<test name = "iPad (8th generation) (backup / iOS 14.3)">
+			<parameter name="device" value="00008020-001158810CBA402E" />
+			<parameter name="platform" value="IOS" />
+			<parameter name="url" value="https://aia.experitest.com/wd/hub" />
+			<parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxODk4MDIsInhwLnAiOjE1MTUwNywieHAubSI6MTYyMzcyODg3MDcyMCwiZXhwIjoxOTU4MzEzOTY1LCJpc3MiOiJjb20uZXhwZXJpdGVzdCJ9.xYGtDMyBZxxScdM7ZK2_MQhNrLa7ikfzAqqBe-41LxI" />
+			<classes>
+				<class name="test.TestRun" />
+			</classes>
+		</test>-->
 </suite>
