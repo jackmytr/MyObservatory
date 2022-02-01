@@ -98,8 +98,9 @@ public class ForecastServicesPage extends BasePage {
 	private MobileElement tomorrowWeather;
 
 	public void tapNineDayForecastBtn() throws Exception {
-		AppiumUtil.swipeLeftElementVisible(nineDayForecastBtn, ConstantFile.TIMEOUT2);  //swipe menu bar until 9-Day forecast btn is visible to tap
-		nineDayForecastBtn.click();  //tap 9-day forecast button on menu bar
+		//call function to swipe left menu bar until 9-Day forecast btn is visible then click
+		AppiumUtil.swipeLeftElementVisible(nineDayForecastBtn, ConstantFile.TIMEOUT2);
+		nineDayForecastBtn.click();
 	}
 
 	public void checkNineDayForecastPage() throws Exception {
@@ -117,7 +118,7 @@ public class ForecastServicesPage extends BasePage {
 		ITestContext itc = test.TestRun.itc;
 		//OS checking since Android and IOS has different way of weather presentation
 		if (itc.getCurrentXmlTest().getParameter("platform").equals("ANDROID")) {
-			//assertion for tomorrow's date, temperature and humidity's element presence before reading their text
+			//Android: assertion for tomorrow's date, temperature and humidity's element presence before reading their text
 			Assert.assertEquals(true, tomorrowDate.isDisplayed());
 			Assert.assertEquals(true, tomorrowTemperature.isDisplayed());
 			Assert.assertEquals(true, tomorrowHumidity.isDisplayed());
@@ -128,7 +129,7 @@ public class ForecastServicesPage extends BasePage {
 			System.out.println("Humidity: " + tomorrowHumidity.getText());
 		}
 		else if (itc.getCurrentXmlTest().getParameter("platform").equals("IOS")) {
-			//assertion for tomorrow's date, temperature and humidity's element presence before reading their text
+			//IOS: assertion for tomorrow's date, temperature and humidity's element presence before reading their text
 			Assert.assertEquals(true, tomorrowDate.isDisplayed());
 			Assert.assertEquals(true, tomorrowWeather.isDisplayed());
 

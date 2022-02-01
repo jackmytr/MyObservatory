@@ -111,8 +111,9 @@ public class CommonPage extends BasePage {
 
 	public void selectLangOpt() throws Exception {
 		ITestContext itc = test.TestRun.itc;
+		//Obtain current OS for execution and to decide language switch flow
 		if (itc.getCurrentXmlTest().getParameter("platform").equals("ANDROID")) {
-			//Language switch - Android flow
+			//Android flow: click more options on the right hand side to find language switch btn
 			new WebDriverWait(driver,ConstantFile.TIMEOUT5).until(ExpectedConditions.visibilityOf(moreOptionsBtn));
 			moreOptionsBtn.click();  //click Android more options btn
 			new WebDriverWait(DriverContext.driver,ConstantFile.TIMEOUT5).until(ExpectedConditions.visibilityOf(languageBtn));
@@ -120,7 +121,7 @@ public class CommonPage extends BasePage {
 			String lang = ExcelUtil.getValue("Language").trim();
 			DriverContext.driver.findElement(By.xpath("//*[@text='" + lang + "']")).click();  //get language from Excel data and decide which language option to tap
 		} else if (itc.getCurrentXmlTest().getParameter("platform").equals("IOS")) {
-			//Language switch - IOS flow
+			//IOS flow: click menu btn on the left hand side then click Setting to find language switch btn
 			new WebDriverWait(DriverContext.driver,ConstantFile.TIMEOUT5).until(ExpectedConditions.visibilityOf(menuBtn));
 			menuBtn.click();  //click menu btn
 			new WebDriverWait(DriverContext.driver,ConstantFile.TIMEOUT5).until(ExpectedConditions.visibilityOf(iosSettingBtn));
