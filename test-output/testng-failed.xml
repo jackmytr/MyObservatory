@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="accessKey" value="eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoxOTQ4NCwieHAucCI6MTUxNTA3LCJ4cC5tIjoxNTkwMzgwNDA2MDgyLCJleHAiOjE5MzM3MjY2MTAsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.NiN00pcLLXGLXgkV1Rty0m5hRRnLf9RQj4vSLdH6Bbs"/>
+  <parameter name="useProxy" value="false"/>
+  <parameter name="device" value="00008101-0015588C20782C3A"/>
+  <parameter name="platform" value="IOS"/>
+  <parameter name="url" value="https://aia.experitest.com/wd/hub"/>
+  <test name="Test(failed)">
+    <classes>
+      <class name="test.TestRun">
+        <methods>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="beforeSuite"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- test.TestRun -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
