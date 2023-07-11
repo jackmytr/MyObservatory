@@ -1,0 +1,67 @@
+How should test evidence be captured
+
+Screenshot capturing is how test evidence should be captured for more of the time, unless there is the necessity to capture test result as video (e.g. to showcase the performance/smoothness of current build to business user). Depending on the nature of test cases, the way to store test evidence can vary.
+
+For functional / UI test cases, a screenshot can be taken for each expected result checkpoint, and name the screenshot as [JIRA ID_checkpoint no.]. For the example below, test evidence are being captured as PNG/JPEG files for the 5 checkpoints of test case HCP-3162 with each file named following the mentioned naming rule:
+
+
+
+In case the test case to be tested involves verification of exported files, store the file separately without renaming it (as file name checking of exported file is usually one of the things to be tested as well).
+
+For End-to-End test cases, as number of checkpoints for this type of test case is usually much more than functional / UI test case, screenshots of checkpoints are consoliated in one Excel worksheet with the tab named as JIRA ID of the test case:
+
+
+
+Test steps are listed out on the worksheet, and list out what to be verified for each checkpoint, following by captured screenshot:
+
+
+
+Exported files for End-to-End test cases can be embedded to the worksheet under correct checkpoint. Again, do not rename the file as file name checking can be important:
+
+
+
+
+
+Where to put the evidence
+
+Assuming test cases for the same story are added to the same JIRA execution and test execution status has been updated to PASS, click the "Play" button and click "Execution Details" (Refer to demo JIRA test execution here)
+
+
+
+For functional / UI test cases, upload all captured files one by one under "Execution Evidence".
+
+
+
+For End-to-End test cases, upload the consolidated Excel file under "Execution Evidence". 
+
+
+
+Execution Defects
+
+When defect is found during testing, update test execution status to FAIL, click the "Play" button and click "Execution Details"
+
+
+
+Defect can be created under "Execution Defects":
+
+
+
+Existing defects can also be linked to this section:
+
+
+
+
+
+
+
+
+What parameters to record
+
+To make sure test result aligns with user story requirement, test result reviewer does not only focus on test evidence but refers to test parameters as well, namely what account was used for the test, test data being input during the test, test build version, iOS/aOS version (if it's a mobile test) etc.
+
+In the following example of an iPad app testing, test parameters such as iPad app version, iOS version, account being used and account type were recorded under "Comment" section of "Execution Details". As a defect was linked to this execution, stakeholders can easily track what kind of defects were spotted on particular version of app build / OS version, and whether the defects have been settled.
+
+
+
+This is another example of test parameters recording. For a SPCP PA submission test case that involves a more complex combination of test data, policy used, policy plan type, account being used and procedure code filled were recorded under "Comment" section. Moreover, PA no. of the submitted case was also mentioned so test result reviewer can refer to the PA no. for further checking of the submission if necessary.
+
