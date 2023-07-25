@@ -1,0 +1,48 @@
+Introduction
+Completion of test execution can be determined by several indicators, which are called "Exit Criteria". Usually test execution is considered completed when it meets one or several of below criteria:
+
+100% test case passing rate, existing defects are identified and resolved
+100% test case execution rate, with remaining defects are agreed to be deferred by business users
+Test summary report is usually broadcasted upon completion of test execution, serving multiple purposes such as:
+
+To notify project team this is the end of UAT execution (implicating the team can now focus on pre-deployment tasks)
+To consolidate all test execution links in one single report, allow business users to locate the test evidences more easily, review and provide user signoff for production deployment 
+To list out defects to be deferred and to obtain confirmation from business users
+Format of test summary report
+HealthCare Connect 2.0 Milestone 5 Regression Test Result Review and Signoff Request.msg
+
+Attached is a sample of test report. A test summary report usually consists of below sections:
+
+Deadline of providing business user signoff
+Although this may have been discussed with business user before test summary report is sent out, it certainly does no harm to reiterate deadline for business user to provide UAT signoff in the report.
+
+
+
+Summary table
+A summary table that consists of UAT period, UAT environment used for testing, build version used for testing and URL of JIRA test plan.
+
+
+
+Execution highlight table
+A highlight table shows overall execution status of the UAT, including number of passed cases, number of aborted cases, number of failed cases (if any, related defects rqeuire business user's confirmation to defer)
+
+
+
+Outstanding item table
+This is a table to list out outstanding items business users have to be aware of. Common items include:
+
+To provide confirmation of remaining defects to be deferred and corresponding ETA provided by Dev team
+To support in pre/post-deployment tasks, such as supplement of production data for data migration, post-deployment monitoring
+To test features at pilot/production (could be due to restraint of UAT environment)
+
+
+Signoff table
+To group test executions of stories which require signoff from business users. Test execution JIRA links are listed out in a table format along with their corresponding story detail such that business users can easily figure out the context of test cases and where to find the test evidence.
+The table shall also include:
+
+Story description
+Story JIRA ID
+Test execution JIRA ID
+Who to review and provide signoff
+Remarks (e.g. reason of test case abortion)
+A guide to access test evidence through JIRA test execution
